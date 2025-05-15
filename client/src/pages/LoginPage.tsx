@@ -54,7 +54,7 @@ const LoginPage = () => {
     setIsLoading(true);
     try {
       await login('demo', 'demo');
-      setLocation('/');
+      setLocation('/dashboard');
     } catch (error) {
       toast({
         title: 'Error',

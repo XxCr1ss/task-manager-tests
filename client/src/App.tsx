@@ -29,7 +29,7 @@ function App() {
     // Redirect based on authentication state
     if (!isLoading) {
       if (isAuthenticated && (location === "/login" || location === "/register")) {
-        setLocation("/");
+        setLocation("/dashboard");
       } else if (!isAuthenticated && location !== "/login" && location !== "/register") {
         setLocation("/login");
       }
@@ -51,7 +51,7 @@ function App() {
         <Switch>
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
-          <Route path="/" component={DashboardPage} />
+          <Route path="/dashboard" component={DashboardPage} />
           <Route component={NotFound} />
         </Switch>
       </TooltipProvider>
